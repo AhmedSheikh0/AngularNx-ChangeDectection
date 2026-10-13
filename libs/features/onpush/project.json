@@ -1,0 +1,8 @@
+{
+  "name": "features-onpush",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/features/onpush/src",
+  "prefix": "demo",
+  "projectType": "library",
+  "tags": ["scope:onpush", "type:feature"]
+}

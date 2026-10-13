@@ -1,0 +1,10 @@
+<section class="demo-panel" [attr.data-scope]="scope()">
+  <header class="demo-panel__head">
+    <h2>{{ heading() }}</h2>
+    <code class="demo-chip">{{ strategy() }}</code>
+  </header>
+  <p class="demo-panel__desc">{{ description() }}</p>
+  <div class="demo-panel__body">
+    <ng-content />
+  </div>
+</section>

@@ -1,0 +1,57 @@
+<header class="top">
+  <div>
+    <h1>How Angular change detection decides what to re-render</h1>
+    @if (only) {
+    <p class="only">
+      Showing only <strong>{{ only.title }}</strong> - build configuration
+      <code>{{ only.configuration }}</code>. The other columns are not created,
+      so their timers are not running.
+    </p>
+    }
+    <p class="lead">
+      Same counter, same timer, three strategies. Open the console (F12) and
+      compare what the
+      <strong>values</strong> do with what the <strong>screen</strong> does.
+    </p>
+  </div>
+
+  <div class="controls">
+    <button class="primary" type="button" (click)="incrementAll()">
+      {{ only ? '+1 to the counter' : '+1 to all counters' }}
+    </button>
+    <small>An event from <em>outside</em> the counter components.</small>
+    <label>
+      <input
+        #logChecks
+        type="checkbox"
+        (change)="setLogTemplateChecks(logChecks.checked)"
+      />
+      also log every template check to the console
+    </label>
+  </div>
+</header>
+
+<main class="columns" [class.single]="only">
+  @if (shown.default) {
+  <demo-default-cd-panel />
+  } @if (shown.onpush) {
+  <demo-onpush-panel />
+  } @if (shown.signals) {
+  <demo-signals-panel />
+  }
+</main>
+
+<footer class="legend">
+  <div>
+    <span class="pill">checked ×N</span> how many times Angular ran that
+    component's template (ngDoCheck).
+  </div>
+  <div>
+    <span class="pill flash">yellow flash</span> the DOM text really changed
+    (MutationObserver).
+  </div>
+  <div>
+    <span class="pill">console</span> every timer tick and counter event,
+    color-coded per strategy.
+  </div>
+</footer>

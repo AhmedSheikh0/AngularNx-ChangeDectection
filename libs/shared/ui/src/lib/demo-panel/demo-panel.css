@@ -1,0 +1,105 @@
+.demo-panel {
+  --accent: #e8590c;
+  --accent-soft: #fff4e6;
+  background: #fff;
+  border: 1px solid #dee2e6;
+  border-top: 6px solid var(--accent);
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 1px 2px rgb(0 0 0 / 6%);
+}
+.demo-panel[data-scope='onpush'] {
+  --accent: #1c7ed6;
+  --accent-soft: #e7f5ff;
+}
+.demo-panel[data-scope='signals'] {
+  --accent: #2f9e44;
+  --accent-soft: #ebfbee;
+}
+
+.demo-panel__head {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+.demo-panel__head h2 {
+  margin: 0;
+  font-size: 1.25rem;
+  color: var(--accent);
+}
+.demo-chip {
+  font-size: 0.72rem;
+  background: var(--accent-soft);
+  color: var(--accent);
+  padding: 3px 10px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+.demo-panel__desc {
+  margin: 10px 0 0;
+  font-size: 0.88rem;
+  line-height: 1.45;
+  color: #495057;
+  min-height: 7.3em;
+}
+.demo-panel__body > * {
+  display: block;
+}
+
+/* ---- shared look for the feature components (projected into the panel) ---- */
+.demo-panel .demo-card {
+  margin-top: 16px;
+  padding: 16px;
+  border: 1px solid #e9ecef;
+  border-radius: 12px;
+  background: #fcfcfd;
+}
+.demo-panel .demo-card__label {
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #868e96;
+}
+.demo-panel .demo-card__body {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 6px 0 12px;
+}
+.demo-panel .demo-value {
+  font-size: 3rem;
+  line-height: 1.1;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  padding: 0 10px;
+  border-radius: 10px;
+}
+.demo-panel .demo-badge {
+  margin-left: auto;
+  font-size: 0.78rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  background: var(--accent-soft);
+  color: var(--accent);
+  padding: 3px 10px;
+  border-radius: 999px;
+}
+.demo-panel .demo-btn {
+  font: inherit;
+  font-size: 0.85rem;
+  cursor: pointer;
+  padding: 7px 14px;
+  border-radius: 8px;
+  border: 1px solid var(--accent);
+  background: #fff;
+  color: var(--accent);
+}
+.demo-panel .demo-btn:hover {
+  background: var(--accent-soft);
+}
+.demo-panel .demo-hint {
+  margin: 10px 0 0;
+  font-size: 0.78rem;
+  color: #868e96;
+}

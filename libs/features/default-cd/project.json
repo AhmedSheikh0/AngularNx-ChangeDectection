@@ -1,0 +1,8 @@
+{
+  "name": "features-default-cd",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/features/default-cd/src",
+  "prefix": "demo",
+  "projectType": "library",
+  "tags": ["scope:default", "type:feature"]
+}
